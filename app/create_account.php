@@ -79,16 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     // Set the session variable after successful account creation
                     $_SESSION['account_created'] = "Your account has been created successfully. You can now log in.";
 
-                    // Send confirmation email via PHPMailer
-                    $mail = new PHPMailer(true);
-                    try {
-         
 
-                        //Recipients
-                        $mail->setFrom('learn@natec.icu', 'Checkmyca');
-                        $mail->addAddress($email, $first_name . ' ' . $last_name); // Add recipient email
-
-// Content
 $mail->isHTML(true);
 $mail->Subject = 'Account Created Successfully';
 $mail->Body    = '
