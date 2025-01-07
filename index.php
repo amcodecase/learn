@@ -36,7 +36,7 @@ $site_name = getenv('SITE_NAME');
             </form>
             <div class="redirects">
                 <p>
-                    <a href="#">Reset Password</a> | <a href="#">Create Account</a>
+                    <a href="app/reset_password.php">Reset Password</a> | <a href="app/create_account.php">Create Account</a>
                 </p>
             </div>
         </div>
