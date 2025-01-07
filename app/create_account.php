@@ -82,14 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     // Send confirmation email via PHPMailer
                     $mail = new PHPMailer(true);
                     try {
-                        //Server settings
-                        $mail->isSMTP();
-                        $mail->Host = 'smtp.titan.email'; // Titan Mail SMTP server
-                        $mail->SMTPAuth = true;
-                        $mail->Username = 'learn@natec.icu'; // Titan Mail username
-                        $mail->Password = '@WhiteDiamond0100'; // Titan Mail password
-                        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-                        $mail->Port = 587;
+         
 
                         //Recipients
                         $mail->setFrom('learn@natec.icu', 'Checkmyca');
