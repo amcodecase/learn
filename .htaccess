@@ -1,0 +1,11 @@
+# Deny access to .ini and .env files
+<FilesMatch "\.(ini|env)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Enable URL rewriting
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]
+
